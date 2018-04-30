@@ -1,0 +1,43 @@
+namespace abc {
+  class xyz {
+    //Write Code Here
+  }
+}
+Fatal error : No code may exist outside of namespace {} in var/www/oops/namespace/index.php on line 13
+
+
+class xyz { }
+namespace abc { 
+    class xyz {
+      //Write Code here
+    } 
+}
+Fatal error: Namespace declaration statement has to be very first statement in the script in 
+var/www/oops/namespace/index.php on line 13
+
+
+<?php
+
+namespace abc {
+
+	class xyz {
+		public function __construct() {
+			echo "Hello From xyz class and abc namespace";
+		}
+	}
+}
+
+namespace {
+	class xyz {
+		public function __construct() {
+			echo "Hello From xyz class and global namespace";
+		}
+	}
+
+$gnsobj = new xyz();
+echo "<br/>";
+use abc\xyz;
+$nsobj = new abc\xyz();
+}
+
+?>
